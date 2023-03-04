@@ -1,106 +1,59 @@
-import { useState } from "react";
-import {
-  Flex,
-  Heading,
-  Input,
-  Button,
-  InputGroup,
-  Stack,
-  InputLeftElement,
-  chakra,
-  Box,
-  Link,
-  Avatar,
-  FormControl,
-  FormHelperText,
-  InputRightElement
-} from "@chakra-ui/react";
-import { FaUserAlt, FaLock } from "react-icons/fa";
+import React from 'react'
+import { useState} from 'react'
+// import {useEffect} from 'react'
+const obj={
+  email:"",
+  password:""
+}
 
-const CFaUserAlt = chakra(FaUserAlt);
-const CFaLock = chakra(FaLock);
+function Login() {
+  const [form, setForm] =useState(obj)
+  const [users, setUsers] = useState([])
 
-const App = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  function handleChange(e){
+    const {name, value} = e.target;
+    setForm({...form, [name]:value})
 
-  const handleShowClick = () => setShowPassword(!showPassword);
+  }
 
+  function handleSubmit(e){
+    e.preventDefault()
+    const {email, password} =form;
+    let check= users.find((e) => e.email===email && e.password===password)
+    if(check){
+      alert('login is sucessfully')
+      console.log(form)
+      setUsers(form)
+    }else{
+      alert('wrong credientials');
+    }
+  }
+
+  // function verify(){
+  //   fetch(`http://localhost:8080/auth/user`,{
+  //     method:"GET"
+  //   }).then((res) => res.json()).then((res) => setUsers(res));
+  // }
+  
+  // useEffect(() => {
+  //   verify()
+  // })
   return (
-    <Flex
-      flexDirection="column"
-      width="100wh"
-      height="100vh"
-      backgroundColor="gray.200"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Stack
-        flexDir="column"
-        mb="2"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Avatar bg="teal.500" />
-        <Heading color="teal.400">Welcome</Heading>
-        <Box minW={{ base: "90%", md: "468px" }}>
-          <form>
-            <Stack
-              spacing={4}
-              p="1rem"
-              backgroundColor="whiteAlpha.900"
-              boxShadow="md"
-            >
-              <FormControl>
-                <InputGroup>
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<CFaUserAlt color="gray.300" />}
-                  />
-                  <Input type="email" placeholder="email address" />
-                </InputGroup>
-              </FormControl>
-              <FormControl>
-                <InputGroup>
-                  <InputLeftElement
-                    pointerEvents="none"
-                    color="gray.300"
-                    children={<CFaLock color="gray.300" />}
-                  />
-                  <Input
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Password"
-                  />
-                  <InputRightElement width="4.5rem">
-                    <Button h="1.75rem" size="sm" onClick={handleShowClick}>
-                      {showPassword ? "Hide" : "Show"}
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
-                <FormHelperText textAlign="right">
-                  <Link>forgot password?</Link>
-                </FormHelperText>
-              </FormControl>
-              <Button
-                borderRadius={0}
-                type="submit"
-                variant="solid"
-                colorScheme="teal"
-                width="full"
-              >
-                Login
-              </Button>
-            </Stack>
-          </form>
-        </Box>
-      </Stack>
-      <Box>
-        New to us?{" "}
-        <Link color="teal.500" href="#">
-          Sign Up
-        </Link>
-      </Box>
-    </Flex>
-  );
-};
+    <div>
+   <form id="form" onSubmit={(e) => handleSubmit(e)}>
 
-export default App;
+   <div className="logo">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpc1z1KfdTErbc_A0_dNFg8E1rN8jgHe5M8w&usqp=CAU" alt="logo"/>
+        </div>
+        
+      <input type="text" name="email" placeholder='email' onChange={(e) => handleChange(e)}/>
+
+      <input type="text" name="password" placeholder='password' onChange={(e) => handleChange(e)}/>
+      
+      <input type="submit" />
+    </form>
+    </div>
+  )
+}
+
+export default Login

@@ -1,12 +1,17 @@
 import './App.css';
-import Login from './Pages/log_in/Login';
-import SignUp from './Pages/sign_up/Signup';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import AllRouter from "./Routes/AllRouter";
+
+
 
 function App() {
   return (
     <div className="App">
-    <SignUp/>
-    {/* <Login/> */}
+      <Navbar/>
+      <AllRouter />
+      <Footer />
+   
     </div>
   );
 }
