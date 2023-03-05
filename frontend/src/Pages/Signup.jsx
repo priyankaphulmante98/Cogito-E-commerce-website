@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 // import { useEffect } from 'react';
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const obj ={
   image:"",
   name:"",
@@ -11,6 +12,7 @@ const obj ={
 
 function Signup() {
   const [form, setForm] = useState(obj)
+  const navigate =useNavigate()
 
   function handleChange(e){
   const {name, value} = e.target
@@ -20,30 +22,29 @@ function Signup() {
 
   function handleSubmit(e){
     e.preventDefault();
-    // fetch(`http://localhost:8080/auth/user`).then((res) => res.json()).then((res)=> setForm(res));
-    console.log(form)
-  //  AddDatauser(form)
+    console.log(form, "ffsd");
+    signupuser(form)
+
+
   }
 
-  // function AddDatauser(e){
-  //   fetch(`http://localhost:8080/auth/user`,{
-  //     method:"POST",
-  //     body:JSON.stringify(form),
-  //     headers:{
-  //       "Content-Type":"application/json",
-  //     },
-  //   }).then((res) => alert("user signup is sucessfully"));
-  // }
-
-  // useEffect(() => {
-  //  AddDatauser()
-  // })
+  function signupuser(user){
+    const {email,password,image,name}=user
+   if(email&&password&&image&&name){
+    axios.post("http://localhost:8080/auth/signup",user).then(res=>{
+      
+      alert(res.data.message)  
+    navigate("/login")}).catch(err=>console.log(err))
+   }else{
+    alert("please fill all the credential")
+   }
+  }
 
   return (
     <div>
       <form id="form" onSubmit={(e) => handleSubmit(e)}>
         <div className="logo">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpc1z1KfdTErbc_A0_dNFg8E1rN8jgHe5M8w&usqp=CAU" alt="logo"/>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPMdwe_k1Qah50LESaV_fZcLYf9MArCvC2NA&usqp=CAU" alt="logo"/>
         </div>
       <input type="src" name="image" placeholder='image' onChange={(e) => handleChange(e)}/>
 

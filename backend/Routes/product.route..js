@@ -4,6 +4,8 @@ const router = express.Router();
 
 const Controller = require("../Controller/product.controller");
 
+
+// apply middleware 
 const authMiddlware = async (req, res, next) => {
   const token = req.headers.token;
   
@@ -19,7 +21,7 @@ const authMiddlware = async (req, res, next) => {
 };
 
 
-
+//Product Routes
 
 router.get("/", Controller.getProduct);
 

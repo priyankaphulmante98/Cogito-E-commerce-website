@@ -5,13 +5,13 @@ const router = express.Router();
 const controller = require('../Controller/user.controller')
 
 
+// user routes
 
+router.get('/user', controller.getUsers)
 
+router.post('/signup', controller.signupUsers)
 
-router.get('/', controller.getUsers)
-
-router.post('/', controller.loginUsers)
-
+router.post('/login', controller.loginUsers)
 
 module.exports = router;
 

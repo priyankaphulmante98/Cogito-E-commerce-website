@@ -1,6 +1,23 @@
-const { json } = require("express");
-const bcrypt = require("bcrypt");
 const user = require("../model/user.model");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+//hashing function
+
+async function hashPassword(pass) {
+  const salt = await bcrypt.genSalt(6);
+  const hashedpass = await bcrypt.hash(pass, salt);
+  return hashedpass;
+}
+
+// comparing  function
+
+async function comparePassword(pass, hashpass) {
+  const valid = await bcrypt.compare(pass, hashpass);
+  return valid;
+}
+
+// all the routes
 
 exports.getUsers = async (req, res) => {
   try {
@@ -11,31 +28,71 @@ exports.getUsers = async (req, res) => {
   }
 };
 
+// signup function
+
 exports.signupUsers = async (req, res) => {
-  const { image, name, email, password } = req.body;
+  const { email, password, name, image } = req.body;
   try {
-    bcrypt.hash(password, 4, async function (err, hash) {
-      // Store hash in your password DB.
-      const users = await user.create({ image, name, email, password: hash });
-      console.log(hash);
-      res.status(200).json(users);
+    const alreadyexists = await user.findOne({ email });
+    let role = "buyer";
+    if (alreadyexists) {
+      return res.send({
+        message:"user already exists please login"
+      });
+    }
+    if (email==="admin@gmail.com"&&password==="admin") {
+      role = "admin";
+    }
+
+    const hashpass = await hashPassword(password);
+    const users = user.create({ email, password: hashpass, name, image, role });
+    return res.send({
+      message: "signup sucessfully",
     });
   } catch (error) {
     console.log(error);
   }
 };
 
+//login function 
+
 exports.loginUsers = async (req, res) => {
-  const { email, password, id } = req.body;
-  let role= "admin"
+  const { email, password } = req.body;
 
   try {
-    let token = `${id}:${email}:${password}:${role}`;
-    res.send({
-      message: "login jhal",
-      token,
-    });
-  } catch (error) {
-    cnonsole.log(error);
+
+    const validateuser = await user.findOne({ email });
+
+    if(validateuser.email==="admin@gmail.com"){
+      const check = await comparePassword(password, validateuser.password);
+      if(check){
+        return res.send({message:" logged in",role:"admin"})
+      }else{
+        return res.status(404).send({message:"wrong credentials"})
+      }
+
+    }
+   else if (validateuser) {
+      const check = await comparePassword(password, validateuser.password);
+      if (check) {
+        let token = jwt.sign(
+          {
+            id: validateuser._id,
+            email: validateuser.email,
+            name: validateuser.name,
+          },
+          "SECRETPRIYA123",
+          { expiresIn: "10 days" }
+        );
+
+        return res.send({ message: "login successfull", token });
+      } else {
+        return res.send("wrong credentials");
+      }
+    } else {
+      return res.send("not a valid user please signup");
+    }
+  } catch (err) {
+    console.log(err);
   }
 };

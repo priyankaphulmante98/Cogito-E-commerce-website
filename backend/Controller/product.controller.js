@@ -1,5 +1,6 @@
 const product_model = require("../model/product.model");
 
+//get the product 
 exports.getProduct = async (req, res) => {
   try {
     const product_data = await product_model.find();
@@ -9,6 +10,8 @@ exports.getProduct = async (req, res) => {
   }
 };
 
+
+//add the product
 exports.postProduct = async (req, res) => {
   const { title, price, image, quantity, desc, category } = req.body;
   try {
@@ -19,6 +22,8 @@ exports.postProduct = async (req, res) => {
   }
 };
 
+
+// get the single product
 exports.singleProdcuct= async (req, res) => {
     const {id} = req.params
 
@@ -31,6 +36,8 @@ exports.singleProdcuct= async (req, res) => {
     }
 };
 
+
+//update the product
 exports.updateProduct = async(req, res) => {
     const {id} =req.params
 
@@ -43,6 +50,7 @@ exports.updateProduct = async(req, res) => {
     }
 }
 
+//delete the product
 exports.deleteProduct =  async(req, res) => {
     const {id} = req.params
  try {
