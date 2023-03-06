@@ -3,15 +3,19 @@ import { useState} from 'react'
 // import {useEffect} from 'react'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
+import { ColorContext } from "../Context/ColorContext";
 const obj = {
   email: "",
   password: "",
 };
 
 function Login() {
+  const { ChangeColor } = useContext(ColorContext);
   const [form, setForm] = useState(obj);
   const [users, setUsers] = useState([]);
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
+  const { token, setToken } = useContext(AuthContext);
   const navigate = useNavigate();
 
   function handleChange(e) {
@@ -19,9 +23,9 @@ function Login() {
     setForm({ ...form, [name]: value });
   }
 
-
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(form);
     if (!form.email || !form.password) {
       alert("please fill all the data");
     } else {
@@ -30,24 +34,28 @@ function Login() {
         .then((res) => {
           alert(res.data.message);
           console.log(res.data);
-        
 
+          localStorage.setItem(
+            "token",
+            JSON.stringify({ token: res.data.token, role: res.data.role })
+          );
+
+          setToken({ token: res.data.token, role: res.data.role });
+
+          ChangeColor();
           if (res.data.role == "admin") {
             // adminPage
             navigate("/admin/add");
           } else {
-            setToken(res.data.token);
-            navigate("/product")
+            // setToken(res.data.token);
+
+            navigate("/product");
           }
         })
         .catch((err) => console.log(err));
     }
   }
 
-
-
-
-  
   return (
     <div>
       <form id="form" onSubmit={(e) => handleSubmit(e)}>

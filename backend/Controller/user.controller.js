@@ -85,12 +85,12 @@ exports.loginUsers = async (req, res) => {
             role:validateuser.role
           }, "SECRETPRIYA123",{ expiresIn: "10 days" });
 
-        return res.send({ message: "login successfull", token });
+        return res.send({ message: "login successfull", token, role:validateuser.role });
       } else {
-        return res.send("wrong credentials");
+        return res.status(404).send("wrong credentials");
       }
     } else {
-      return res.send("not a valid user please signup");
+      return res.status(404).send("not a valid user please signup");
     }
   } catch (err) {
     console.log(err);

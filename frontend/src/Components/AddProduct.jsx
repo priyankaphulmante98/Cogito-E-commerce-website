@@ -22,16 +22,11 @@ function AddProduct() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(data);
-   fetch(`http://localhost:8080/product`,{
-    method:"POST",
-    body:JSON.stringify(data),
-    headers:{
-      "Content-Type":"application/json"
-    }
-   })
-    // setData(data);
+   axios.post(`http://localhost:8080/product`,data).then((res) => {alert("product added sucessfully") 
+   getData()})
+
   }
-console.log(gdata);
+
 async function getData() {
   let res = await axios.get(`http://localhost:8080/product`);
   console.log(res.data,"dataaaaaaaaaaaaaaaaaaaaa");
@@ -41,7 +36,10 @@ async function getData() {
 function handleDelete(id) {
   try {
     axios.delete(`http://localhost:8080/product/${id}`)
-      .then((res) => console.log(alert("deleted")));
+      .then((res) => {
+        alert("deleted")
+        getData();
+      });
   } catch (err) {
     console.log(err);
   }
@@ -79,7 +77,7 @@ return (
         onChange={(e) => handleChage(e)}
       />
       <input
-        type="number"
+        type="text"
         placeholder="price"
         name="price"
         onChange={(e) => handleChage(e)}
