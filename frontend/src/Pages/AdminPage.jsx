@@ -1,11 +1,11 @@
 import React from "react";
 
-import Navbar_admin from "../Components/Navbar_admin";
+import AdminNavbar from "../Components/AdminNavbar";
 
 function AdminPage() {
   return (
     <div id="admin-nav">
-       <Navbar_admin/>
+       <AdminNavbar/>
      
     </div>
   );

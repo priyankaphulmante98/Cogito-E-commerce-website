@@ -1,22 +1,20 @@
 import React, { useState,  useEffect } from 'react'
+import axios from "axios"
 
 function Product() {
 
     const [data, setData] = useState([]);
-    const [filterBy, setFilterBy] =useState("")
-   
-        
-    async function getData({filterBy}){
-      let res = await fetch(`https://fakestoreapi.com/products`);
-      let data = await res.json();
-      console.log(data);
-       setData(data);
+  
+    async function getData(){
+      let res = await axios.get(`http://localhost:8080/product`);
+      console.log(res.data);
+       setData(res.data);
     }
 
 
     useEffect(() => {
-       getData({filterBy})
-    },[filterBy])
+       getData()
+    },[])
 
 
     return (
@@ -24,7 +22,7 @@ function Product() {
   <div>
 
 <div id="filterSort">
- <select id="filter" placeholder="filterBy" onChange={(e) => setFilterBy(e.target.value)}>
+ <select id="filter" placeholder="filterBy" >
   <option value="">Filter by Category</option>
   <option value="furniture">Furniture</option>
   <option value="clothes">Clothes</option>
@@ -53,15 +51,14 @@ function Product() {
      
         <div id="container">
             {
-                data.map((e)=> {
-                  return  <div id="box" key={e.id}>
+                data.map((e,i)=> {
+                  return  <div id="box" key={i}>
                 <img src={e.image} alt="chi"/>
                 <h4>{e.price}</h4>
-                <h3>{e.category.name}</h3>
+                <h3>{e.category}</h3>
                 <h3>{e.title}</h3>
-                <p className="desc">{e.description}</p>
-                <button>ADD TO CART</button>
-                <button>DELETE</button> 
+                <p>{e.desc}</p>
+                <button>BUY</button>
         </div>
 
                 })

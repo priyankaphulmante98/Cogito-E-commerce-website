@@ -62,7 +62,8 @@ exports.loginUsers = async (req, res) => {
   try {
 
     const validateuser = await user.findOne({ email });
-
+     
+    //admin functionallity
     if(validateuser.email==="admin@gmail.com"){
       const check = await comparePassword(password, validateuser.password);
       if(check){
@@ -72,18 +73,16 @@ exports.loginUsers = async (req, res) => {
       }
 
     }
+
    else if (validateuser) {
       const check = await comparePassword(password, validateuser.password);
       if (check) {
-        let token = jwt.sign(
-          {
+
+        let token = jwt.sign({
             id: validateuser._id,
             email: validateuser.email,
             name: validateuser.name,
-          },
-          "SECRETPRIYA123",
-          { expiresIn: "10 days" }
-        );
+          }, "SECRETPRIYA123",{ expiresIn: "10 days" });
 
         return res.send({ message: "login successfull", token });
       } else {

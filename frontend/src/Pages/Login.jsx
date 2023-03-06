@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState} from 'react'
 // import {useEffect} from 'react'
 import axios from "axios";
@@ -19,6 +19,7 @@ function Login() {
     setForm({ ...form, [name]: value });
   }
 
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!form.email || !form.password) {
@@ -29,10 +30,11 @@ function Login() {
         .then((res) => {
           alert(res.data.message);
           console.log(res.data);
+        
 
           if (res.data.role == "admin") {
             // adminPage
-            navigate("/admin");
+            navigate("/admin/add");
           } else {
             setToken(res.data.token);
             navigate("/product")
@@ -41,6 +43,9 @@ function Login() {
         .catch((err) => console.log(err));
     }
   }
+
+
+
 
   
   return (
