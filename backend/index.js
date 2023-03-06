@@ -1,11 +1,12 @@
 const express = require('express')
 require('./Config/db')
-const product_route = require('./Routes/product.route.')
+const product_route = require('./Routes/product.route')
 const user_route = require('./Routes/user.route')
 const cors = require("cors")
 
-const app= express()
 
+
+const app= express()
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())

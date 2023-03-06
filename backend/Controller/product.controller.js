@@ -13,7 +13,6 @@ exports.getProduct = async (req, res) => {
 
 //add the product
 exports.postProduct = async (req, res) => {
-  const { title, price, image, quantity, desc, category } = req.body;
   try {
     const product_data = await product_model.create(req.body);
     res.status(200).json(product_data);
@@ -54,6 +53,7 @@ exports.updateProduct = async(req, res) => {
 exports.deleteProduct =  async(req, res) => {
     const {id} = req.params
  try {
+  console.log("delete request")
 
     const product_data = await product_model.findByIdAndDelete(id)
     res.status(200).json(product_data)

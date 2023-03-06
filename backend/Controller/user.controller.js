@@ -64,17 +64,17 @@ exports.loginUsers = async (req, res) => {
     const validateuser = await user.findOne({ email });
      
     //admin functionallity
-    if(validateuser.email==="admin@gmail.com"){
-      const check = await comparePassword(password, validateuser.password);
-      if(check){
-        return res.send({message:" logged in",role:"admin"})
-      }else{
-        return res.status(404).send({message:"wrong credentials"})
-      }
+    // if(validateuser.email==="admin@gmail.com"){
+    //   const check = await comparePassword(password, validateuser.password);
+    //   if(check){
+    //     return res.send({message:" logged in",role:"admin"})
+    //   }else{
+    //     return res.status(404).send({message:"wrong credentials"})
+    //   }
 
-    }
+    // }
 
-   else if (validateuser) {
+    if (validateuser) {
       const check = await comparePassword(password, validateuser.password);
       if (check) {
 
@@ -82,6 +82,7 @@ exports.loginUsers = async (req, res) => {
             id: validateuser._id,
             email: validateuser.email,
             name: validateuser.name,
+            role:validateuser.role
           }, "SECRETPRIYA123",{ expiresIn: "10 days" });
 
         return res.send({ message: "login successfull", token });
