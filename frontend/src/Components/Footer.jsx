@@ -1,50 +1,69 @@
-import React, { useContext } from 'react'
-import { ColorContext } from '../Context/ColorContext'
-import styles from '../Styles/Footer.module.css'
+import React, { useContext } from "react";
+import { ColorContext } from "../Context/ColorContext";
+import styles from "../Styles/Footer.module.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
-
-  const {bg} = useContext(ColorContext)
+  const { bg } = useContext(ColorContext);
 
   return (
-    <div className={styles.footer} style={{backgroundColor:bg}} >
+    <>
+    <div className={styles.footer} style={{ backgroundColor: bg }}>
+     <div style={{display:"flex", justifyContent:"space-around", padding:"50px" , width:"100%"}}>
 
- 
-    </div>
-  )
+      <div className="col-1" style={{ width:"300px", textAlign:"center"}}>
+        <h5 style={{marginBottom:"40px"}}>USEFUL LINKS</h5>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">About</Link></p>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Home</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Setvices</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Contact</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Blog</Link></p>
+
+     
+       
+      </div>
+
+      <div className="col-1" style={{ width:"300px", textAlign:"center"}}>
+        <h5 style={{marginBottom:"40px"}}>USEFUL LINKS</h5>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">About</Link></p>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Home</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Setvices</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Contact</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Blog</Link></p>
+
+      
+       
+      </div>
+
+      <div className="col-1" style={{ width:"300px", textAlign:"center"}}>
+        <h5 style={{marginBottom:"40px"}}>USEFUL LINKS</h5>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">About</Link></p>
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Home</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Setvices</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Contact</Link></p>
+       
+       <p > <Link  style={{textDecoration:"none", color:"white", listStyle:"none"}} to="#">Blog</Link></p>
+
+    
+       
+      </div>
+      
+
+      
+      </div>
+    
+</div>
+      </>
+    
+  );
 }
 
-export default Footer
-
-// import React, { useState } from 'react';
-
-// function App() {
-//   const [navbarColor, setNavbarColor] = useState(getRandomColor());
-//   const [footerColor, setFooterColor] = useState(getRandomColor());
-
-//   function getRandomColor() {
-//     const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple'];
-//     return colors[Math.floor(Math.random() * colors.length)];
-//   }
-
-//   function handleNavbarClick() {
-//     setNavbarColor(getRandomColor());
-//   }
-
-//   function handleFooterClick() {
-//     setFooterColor(getRandomColor());
-//   }
-
-//   return (
-//     <div>
-//       <nav style={{ backgroundColor: navbarColor }} onClick={handleNavbarClick}>
-//         <h1>Navbar</h1>
-//       </nav>
-//       <footer style={{ backgroundColor: footerColor }} onClick={handleFooterClick}>
-//         <p>Footer</p>
-//       </footer>
-//     </div>
-//   );
-// }
-
-// export default App;
+export default Footer;

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useState} from 'react'
-// import {useEffect} from 'react'
+import styles from '../Styles/Login.module.css'
+// import "../Styles/Login.module.css"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
@@ -57,11 +58,11 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className={styles.login}>
       <form id="form" onSubmit={(e) => handleSubmit(e)}>
         <div className="logo">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwj_byyi9UwNhE26dSp2BlRa2E6mscA1BsA&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWvlomyP-g7nvShNiPqEDo3o9dd6ApBAh8w&usqp=CAU"
             alt="logo"
           />
         </div>

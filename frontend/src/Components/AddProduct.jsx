@@ -1,5 +1,4 @@
 import React from "react";
-import AdminPage from "../Pages/AdminPage";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "./Modal";
@@ -53,8 +52,8 @@ return (
   <>
     <form id="form" onSubmit={(e) => handleSubmit(e)}>
       <div className="logo">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScj3EvqzfsaQXm88tEsY7Fd_U2rAU7X2Cbtg&usqp=CAU"
+        <img style={{height:"60px", width:"250px"}}
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
           alt="logo"
         />
       </div>
@@ -63,25 +62,25 @@ return (
         placeholder="image"
         name="image"
         onChange={(e) => handleChage(e)}
-      />
+       required="true"/>
       <input
         type="text"
         placeholder="title"
         name="title"
         onChange={(e) => handleChage(e)}
-      />
+        required="true" />
       <input
         type="text"
         placeholder="desc"
         name="desc"
         onChange={(e) => handleChage(e)}
-      />
+        required="true" />
       <input
         type="text"
         placeholder="price"
         name="price"
         onChange={(e) => handleChage(e)}
-      />
+        required="true"/>
       <select name="category" onChange={(e) => handleChage(e)}>
         <option value="">Category</option>
         <option value="jewellery">Jewellery</option>
@@ -109,17 +108,15 @@ return (
             <h3>{e.category}</h3>
             <h3>{e.title}</h3>
             <p>{e.desc}</p>
-            {/* <button onClick={() =>{OpenModal()}}>UPDATE</button> */}
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               <Modal />
               <button
                 type="button"
                 className="btn btn-outline-primary ms -auto"
-                onClick={() => handleDelete(e._id)}
-              >
+                onClick={() => handleDelete(e._id)}>
                 <span className="fa fa-sign-in me-1"></span> DELETE
               </button>
-              {/* <button>DELETE</button> */}
+          
             </div>
           </div>
         );

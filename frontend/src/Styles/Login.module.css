@@ -1,0 +1,61 @@
+.logo img {
+    height:80px;
+    width:300px;
+    border-radius: 20px;
+    margin-bottom:40px;
+    margin-left:80px;
+    box-shadow: rgba(210, 10, 130, 0.2) 4px 5px 25px 5px;
+  }
+  
+  #form{
+  width: 500px;
+  height: auto;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  margin: auto;
+  align-items: center;
+  margin-top: 10px;
+  padding: 30px ;
+  box-shadow: rgba(164, 8, 91, 0.2) 0px 8px 24px;
+  background-color: whitesmoke; 
+  margin-top: 60px;
+  }
+  
+  label{
+  color: rgb(116, 106, 106);
+  width:auto;
+  }
+  
+  input[type="src"],
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+  width:30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  }
+  
+  input[type="submit"]{
+  background-color: rgb(215, 12, 154);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 20px;
+  margin-left: 30%;
+  
+  }
+  
+  input[type="submit"]:hover {
+  background-color: rgb(53, 53, 53);
+  
+  }
+  
+  

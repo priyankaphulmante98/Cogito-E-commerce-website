@@ -82,19 +82,10 @@ function Modal() {
                     <option value="books">Books</option>
                   </select>
                 </div>
-
-                {/*                 
-                    <button type="submit" className="btn btn-outline-primary w-100 mt-4">Submit</button> */}
               </form>
             </div>
             <div className="modal-footer">
-              {/* <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button> */}
+             
               <button type="button" className="btn btn-primary">
                 Save changes
               </button>
