@@ -17,6 +17,7 @@ const {bg} = useContext(ColorContext)
         <Link to="/">HOME</Link>
         <Link to="/singleproduct">PRODUCT</Link>
         <Link to='/contact'>CONTACT</Link>
+        <Link to="/cart">CART</Link>
         <Link to="/login">LOGIN</Link>
         <Link to="/signup">SIGNUP</Link>
        {token.role === "admin" &&  <Link to="/admin/add">ADMIN</Link>}

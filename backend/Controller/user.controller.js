@@ -27,6 +27,17 @@ exports.getUsers = async (req, res) => {
     console.log(error);
   }
 };
+exports.userProfile = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const  {email,role,name,id:_id,image} = await user.findOne({ _id: id });
+
+   
+    res.status(200).json({email,role,name,image,id});
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // signup function
 
@@ -37,10 +48,10 @@ exports.signupUsers = async (req, res) => {
     let role = "buyer";
     if (alreadyexists) {
       return res.send({
-        message:"user already exists please login"
+        message: "user already exists please login",
       });
     }
-    if (email==="admin@gmail.com"&&password==="admin") {
+    if (email === "admin@gmail.com" && password === "admin") {
       role = "admin";
     }
 
@@ -54,38 +65,33 @@ exports.signupUsers = async (req, res) => {
   }
 };
 
-//login function 
+//login function
 
 exports.loginUsers = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-
     const validateuser = await user.findOne({ email });
-     
-    //admin functionallity
-    // if(validateuser.email==="admin@gmail.com"){
-    //   const check = await comparePassword(password, validateuser.password);
-    //   if(check){
-    //     return res.send({message:" logged in",role:"admin"})
-    //   }else{
-    //     return res.status(404).send({message:"wrong credentials"})
-    //   }
-
-    // }
-
     if (validateuser) {
       const check = await comparePassword(password, validateuser.password);
       if (check) {
-
-        let token = jwt.sign({
+        let token = jwt.sign(
+          {
             id: validateuser._id,
             email: validateuser.email,
             name: validateuser.name,
-            role:validateuser.role
-          }, "SECRETPRIYA123",{ expiresIn: "10 days" });
+            role: validateuser.role,
+          },
+          "SECRETPRIYA123",
+          { expiresIn: "10 days" }
+        );
 
-        return res.send({ message: "login successfull", token, role:validateuser.role });
+        return res.send({
+          message: "login successfull",
+          token,
+          role: validateuser.role,
+          userId: validateuser._id,
+        });
       } else {
         return res.status(404).send("wrong credentials");
       }

@@ -54,7 +54,7 @@ function Product() {
                 <h6>{e.category}</h6>
                 <p>{e.desc}</p>
                 <h5>{e.price}</h5>
-                <NavLink to={`/singleproduct`} className="btn btn-outline-primary">ADD TO CART</NavLink>
+                <NavLink to={`/singleproduct/${e._id}`} className="btn btn-outline-primary">ADD TO CART</NavLink>
         </div>
 
                 })

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useState} from 'react'
 import styles from '../Styles/Login.module.css'
-// import "../Styles/Login.module.css"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
@@ -38,7 +37,7 @@ function Login() {
 
           localStorage.setItem(
             "token",
-            JSON.stringify({ token: res.data.token, role: res.data.role })
+            JSON.stringify({ token: res.data.token, role: res.data.role,userId:res.data.userId })
           );
 
           setToken({ token: res.data.token, role: res.data.role });
@@ -59,8 +58,8 @@ function Login() {
 
   return (
     <div className={styles.login}>
-      <form id="form" onSubmit={(e) => handleSubmit(e)}>
-        <div className="logo">
+      <form id={styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <div className={styles.logo}>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWvlomyP-g7nvShNiPqEDo3o9dd6ApBAh8w&usqp=CAU"
             alt="logo"

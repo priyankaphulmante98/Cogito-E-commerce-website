@@ -21,12 +21,12 @@
   margin-top: 60px;
   }
   
-  label{
+  #form label{
   color: rgb(116, 106, 106);
   width:auto;
   }
   
-  input[type="src"],
+  #form input[type="src"],
   input[type="text"],
   input[type="number"],
   select,
@@ -40,8 +40,8 @@
   resize: vertical;
   }
   
-  input[type="submit"]{
-  background-color: rgb(215, 12, 154);
+  #form input[type="submit"]{
+  background: teal;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -53,7 +53,7 @@
   
   }
   
-  input[type="submit"]:hover {
+  #form input[type="submit"]:hover {
   background-color: rgb(53, 53, 53);
   
   }
