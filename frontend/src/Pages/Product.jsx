@@ -18,13 +18,16 @@ function Product() {
        getData()
     },[])
 
+    function handleFilter(){
+
+    }
 
     return (
       <div>
   
-{/* 
+
 <div id="filterSort" style={{display:"flex", justifyContent:"space-around", columnGap:"30px", width:"100%"}} >
- <select id="filter" style={{width:"300px",boxShadow: "rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px"}} placeholder="filterBy" >
+ <select id="filter" style={{marginTop:"20px",width:"300px",boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px"}} placeholder="filterBy" >
   <option value="">Filter by Category</option>
   <option value="lipstick">Furniture</option>
   <option value="powder">Clothes</option>
@@ -33,14 +36,13 @@ function Product() {
   <option value="eyebrush">Shoes</option>
  </select>
 
- <select id="sort" style={{width:"300px",boxShadow: "rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px"}} placeholder="orderOfSort" onChange={() => handleFilter()}>
-<option value="">Sort</option>
+<select id="sort" style={{marginTop:"20px",width:"300px",boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px"}} placeholder="filterBy" >
+<option value="">Filter by Category</option> 
 <option value="asc">ASCENDING</option>
 <option value="desc">DESCNDING</option>
  </select>
 
-  </div>  */}
-
+  </div> 
      
         <div id={Styles.container}>
             {

@@ -17,12 +17,15 @@ const {bg} = useContext(ColorContext)
     <div id={Styles.Navbar} style={{backgroundColor:bg}}>
       <span style={{width:"400px", display:"flex", justifyContent:"space-around"}}>
       
-        <Link to="/"><i style={{fontSize:"35px"}} class="fa-solid fa-house"></i></Link>
-        <Link to="/singleproduct"><i style={{fontSize:"35px"}} class="fa-brands fa-product-hunt"></i></Link>
-        <Link to='/contact'><i  style={{fontSize:"35px"}}class="fa-solid fa-user"></i></Link>
-        <Link to="/cart"><i style={{fontSize:"35px"}} class="fa-solid fa-cart-plus"></i></Link>
+        <Link to="/"><i style={{fontSize:"25px"}} class="fa-solid fa-house"></i>&nbsp; HOME</Link>
+        <Link to="/singleproduct"><i style={{fontSize:"25px"}} class="fa-brands fa-product-hunt"></i></Link>
+       
         </span>
+        
         <div style={{width:"400px", display:"flex", flexDirection:"row-reverse", justifyContent:'space-around', marginLeft:"900px"}}>
+        <Link to='/contact'><i  style={{fontSize:"25px"}}class="fa-solid fa-user"></i></Link>
+        
+        <Link to="/cart"><i style={{fontSize:"25px"}} class="fa-solid fa-cart-plus"></i></Link>
         <Link to="/login">LOGIN</Link>
         <Link to="/signup">SIGNUP</Link>
        {token.role === "admin" &&  <Link to="/admin/add">ADMIN</Link>}

@@ -52,36 +52,42 @@ useEffect(() => {
 return (
   <>
     <form className={Styles.form} onSubmit={(e) => handleSubmit(e)}>
-      <div className={Styles.logo}>
-        <img 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
-          alt="logo"
-        />
+      <div className={Styles.logo} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+        
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
+            alt="logo"
+          />
+ 
       </div>
       <input
         type="url"
         placeholder="image"
         name="image"
         onChange={(e) => handleChage(e)}
-       required="true"/>
+        required="true"
+      />
       <input
         type="text"
         placeholder="title"
         name="title"
         onChange={(e) => handleChage(e)}
-        required="true" />
+        required="true"
+      />
       <input
         type="text"
         placeholder="desc"
         name="desc"
         onChange={(e) => handleChage(e)}
-        required="true" />
+        required="true"
+      />
       <input
         type="text"
         placeholder="price"
         name="price"
         onChange={(e) => handleChage(e)}
-        required="true"/>
+        required="true"
+      />
       <select name="category" onChange={(e) => handleChage(e)}>
         <option value="">Category</option>
         <option value="jewellery">Jewellery</option>
@@ -103,13 +109,14 @@ return (
             <h5>{e.price}</h5>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               <Modal />
-              <button id={Styles.btn}
+              <button
+                id={Styles.btn}
                 type="button"
                 className="btn btn-outline-primary ms -auto"
-                onClick={() => handleDelete(e._id)}>
+                onClick={() => handleDelete(e._id)}
+              >
                 <span className="fa fa-sign-in me-1"></span> DELETE
               </button>
-          
             </div>
           </div>
         );
