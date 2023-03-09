@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Styles from '../Styles/Cart.module.css'
 
 function Cart() {
   const [carts, setCarts] = useState([]);
@@ -38,37 +39,37 @@ function Cart() {
   }, []);
   return (
     <div>
-      <div>total ammount :{total || 0}</div>
+      <div className={Styles.total}>TOTAL AMOUNT : &nbsp;{total || 0}</div>
       {carts?.map((e) => {
         return (
-          <div style={{ display: "flex", gap: "2rem" }}>
-            <div>
+          <div  className={Styles.product}>
+            <div className={Styles.Pro_img}>
               <img src={e.productId.image} alt={e.productId.title} />
             </div>
-            <div>
+            <div className={Styles.cartProduct}>
               <h3>{e.productId.title}</h3>
               <p>{e.productId.category}</p>
-              <p>{e.productId.price}</p>
+              <h5>{e.productId.price}</h5>
               <div>
-                <button onClick={() => changeQuanity(e._id, e.quantity + 1)}>
-                  +
-                </button>
-                <span>{e.quantity}</span>
-                <button
+                <span onClick={() => changeQuanity(e._id, e.quantity + 1)}>
+                <i style={{ fontSize:"40px" ,color:"green", marginRight:"10px"}} class="fa-solid fa-square-plus"></i>
+                </span>
+                <span style={{textAlign:"center"}}>{e.quantity}</span>
+                <span
                   disabled={e.quantity <= 1}
                   onClick={() => changeQuanity(e._id, e.quantity - 1)}
                 >
-                  -
-                </button>
+                  <i style={{ fontSize:"40px" ,color:"red", marginLeft:"10px"}} class="fa-solid fa-square-minus"></i>
+                </span>
               </div>
               <div>
-                <button
+                <div
                   onClick={() => {
                     removefromcart(e._id);
                   }}
                 >
-                  REMOVE
-                </button>
+                 <i style={{ fontSize:"30px" ,color:"blue", marginTop:"1px"}} class="fa-solid fa-trash"></i>
+                </div>
               </div>
             </div>
           </div>

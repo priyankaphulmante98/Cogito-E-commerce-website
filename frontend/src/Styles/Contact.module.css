@@ -1,0 +1,42 @@
+body{
+
+    background: #040404 url("https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102__340.jpg") top right no-repeat;
+  background-color: #111;
+  height: 100vh;
+  color: black;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+} 
+#chitr {
+  height: 60px;
+    width: 220px;
+  border-radius: 50px;
+    margin-bottom: 40px;
+    box-shadow: rgba(4, 84, 131, 0.2) 4px 5px 25px 5px;
+  }
+
+.form {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  align-items: center;
+  padding: 30px;
+  box-shadow: rgba(164, 8, 91, 0.2) 0px 8px 24px;
+  background-color: whitesmoke;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.form img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  margin-bottom:20px;
+}
+

@@ -1,21 +1,18 @@
 import React, { useState,  useEffect } from 'react'
 import axios from "axios"
+import Styles from '../Styles/Product.module.css'
 import { NavLink } from 'react-router-dom';
 
 
 function Product() {
+  
+   const [data, setData] = useState([]);
 
-    const [data, setData] = useState([]);
-  
-  
     async function getData(){
       let res = await axios.get(`http://localhost:8080/product`);
       console.log(res.data);
        setData(res.data);
     }
-
-   
-
 
     useEffect(() => {
        getData()
@@ -45,10 +42,10 @@ function Product() {
   </div>  */}
 
      
-        <div id="container">
+        <div id={Styles.container}>
             {
                 data.map((e,i)=> {
-                  return  <div id="box" key={i}>
+                  return  <div id={Styles.box} key={i}>
                 <img src={e.image} alt="chi"/>
                 <h3>{e.title}</h3>
                 <h6>{e.category}</h6>

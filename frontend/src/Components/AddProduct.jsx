@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "./Modal";
+import Styles from '../Styles/AddProduct.module.css'
 
 function AddProduct() {
   const [gdata, setgData] = useState([]);
@@ -50,15 +51,15 @@ useEffect(() => {
 
 return (
   <>
-    <form id="form" onSubmit={(e) => handleSubmit(e)}>
-      <div className="logo">
-        <img style={{height:"60px", width:"250px"}}
+    <form className={Styles.form} onSubmit={(e) => handleSubmit(e)}>
+      <div className={Styles.logo}>
+        <img 
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
           alt="logo"
         />
       </div>
       <input
-        type="src"
+        type="url"
         placeholder="image"
         name="image"
         onChange={(e) => handleChage(e)}
@@ -88,29 +89,21 @@ return (
         <option value="shoes">Shoes</option>
         <option value="books">Books</option>
       </select>
-      <input
-        type="Submit"
-        style={{
-          marginTop: "20px",
-          border: "2px solid blue",
-          backgroundColor: "white",
-          color: "blue",
-        }}
-      />
+      <input type="Submit" />
     </form>
 
-    <div id="container">
+    <div id={Styles.container}>
       {gdata?.map((e, i) => {
         return (
-          <div id="box" key={i}>
-            <img src={e.image} alt="chi" />
-            <h4>{e.price}</h4>
-            <h3>{e.category}</h3>
+          <div id={Styles.box} key={i}>
+            <img src={e.image} alt="chitr" />
             <h3>{e.title}</h3>
+            <h6>{e.category}</h6>
             <p>{e.desc}</p>
+            <h5>{e.price}</h5>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               <Modal />
-              <button
+              <button id={Styles.btn}
                 type="button"
                 className="btn btn-outline-primary ms -auto"
                 onClick={() => handleDelete(e._id)}>

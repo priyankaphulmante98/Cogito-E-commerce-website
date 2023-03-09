@@ -1,81 +1,268 @@
-import React from 'react'
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-
-function SingleProduct() {
-  const params = useParams();
-  const [product, setProduct] = useState({});
-
-  function GetSingleprod() {
-    axios.get(`http://localhost:8080/product/${params.id}`).then((res) => {
-      setProduct(res.data);
-      // console.log(res.data, "singleprod");
-
-    });
-  }
-
-  useEffect(() => {
-    GetSingleprod();
-  }, []);
-
-  function AddtoCart(productid) {
-    let user = JSON.parse(localStorage.getItem("token")) || null;
-    
-    if (user.userId) {
-      // console.log(user)
-      axios
-        .post(`http://localhost:8080/cart/${user.userId}`, {
-          productId: productid,
-        })
-        .then((res) => alert("kel add")).catch(err=>alert("might already exists"))
-    } else {
-      alert("please login");
-    }
-  }
-
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCol,
+  MDBContainer,
+  MDBIcon,
+  MDBInput,
+  MDBRow,
+  MDBTypography,
+  } from "mdb-react-ui-kit";
+  import React from "react";
+  
+  export default function Single() {
   return (
-    <>
-      <div
-        className="container my-5 py-3"
-        style={{
-          boxShadow:
-            "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-          borderRadius: "20px",
-        }}
-      >
-        <div className="row">
-          <div className="col-md-6 d-flex justify-content-center mx-auto product">
-            <img
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoA_sVWUwvlckcQIfPUCdWC43-FYv3JXiBPxsOiCP6trtu0wbrPZx_roxdX_kDRnbT88I&usqp=CAU"
-              }
-              alt={"chitrt"}
-              height="300px"
-            />
-          </div>
-          <div className="col-md-6 d-flex flex-column justify-content-center">
-            <h3 className="display-7 fw-bold">{product?.title}</h3>
-            <hr />
-            <h5 className="my-4">PRICE : ${product?.price}</h5>
-            <h6 className="my-4">CATEGORY : {product.category} </h6>
-            <p className="lead">
-              DESCRPTION : 
-              {product.desc}
-            </p>
-           
-            <button
-              onClick={() => AddtoCart(product._id)}
-              className="btn btn-outline-primary  my-5"
-            >
-            
-              ADD To CART
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+  <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <MDBContainer className="py-5 h-100" >
+      <MDBRow  style={{  boxShadow:" rgba(164, 8, 91, 0.2) 0px 8px 24px"}}className="justify-content-center align-items-center h-100">
+        <MDBCol>
+          <MDBCard>
+            <MDBCardBody className="p-4">
+              <MDBRow>
+                <MDBCol lg="7">
+                  <MDBTypography tag="h5">
+                    <a href="/" style={{textDecoration:"none", color:"teal"}}className="text-body">
+                      <MDBIcon fas icon="long-arrow-alt-left me-2" /> Continue
+                      shopping
+                    </a>
+                  </MDBTypography>
+  
+                  <hr />
+  
+                  <div className="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                      <p className="mb-1">Shopping cart</p>
+                      <p className="mb-0">You have 4 items in your cart</p>
+                    </div>
+                   
+                  </div>
+  
+                  <MDBCard className="mb-3">
+                    <MDBCardBody>
+                      <div className="d-flex justify-content-between">
+                        <div className="d-flex flex-row align-items-center">
+                          <div>
+                            <MDBCardImage
+                              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                              fluid className="rounded-3" style={{ width: "65px" }}
+                              alt="Shopping item" />
+                          </div>
+                          <div className="ms-3">
+                            <MDBTypography tag="h5">
+                              Iphone 11 pro
+                            </MDBTypography>
+                            <p className="small mb-0">256GB, Navy Blue</p>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center">
+                          <div style={{ width: "50px" }}>
+                            <MDBTypography tag="h5" className="fw-normal mb-0">
+                              2
+                            </MDBTypography>
+                          </div>
+                          <div style={{ width: "80px" }}>
+                            <MDBTypography tag="h5" className="mb-0">
+                              $900
+                            </MDBTypography>
+                          </div>
+                          <a href="#!" style={{ color: "#cecece" }}>
+                            <MDBIcon fas icon="trash-alt" />
+                          </a>
+                        </div>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+  
+                  <MDBCard className="mb-3">
+                    <MDBCardBody>
+                      <div className="d-flex justify-content-between">
+                        <div className="d-flex flex-row align-items-center">
+                          <div>
+                            <MDBCardImage
+                              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+                              fluid className="rounded-3" style={{ width: "65px" }}
+                              alt="Shopping item" />
+                          </div>
+                          <div className="ms-3">
+                            <MDBTypography tag="h5">
+                              Samsung galaxy Note 10
+                            </MDBTypography>
+                            <p className="small mb-0">256GB, Navy Blue</p>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center">
+                          <div style={{ width: "50px" }}>
+                            <MDBTypography tag="h5" className="fw-normal mb-0">
+                              2
+                            </MDBTypography>
+                          </div>
+                          <div style={{ width: "80px" }}>
+                            <MDBTypography tag="h5" className="mb-0">
+                              $900
+                            </MDBTypography>
+                          </div>
+                          <a href="#!" style={{ color: "#cecece" }}>
+                            <MDBIcon fas icon="trash-alt" />
+                          </a>
+                        </div>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+  
+                  <MDBCard className="mb-3">
+                    <MDBCardBody>
+                      <div className="d-flex justify-content-between">
+                        <div className="d-flex flex-row align-items-center">
+                          <div>
+                            <MDBCardImage
+                              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+                              fluid className="rounded-3" style={{ width: "65px" }}
+                              alt="Shopping item" />
+                          </div>
+                          <div className="ms-3">
+                            <MDBTypography tag="h5">
+                              Canon EOS M50
+                            </MDBTypography>
+                            <p className="small mb-0">Onyx Black</p>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center">
+                          <div style={{ width: "50px" }}>
+                            <MDBTypography tag="h5" className="fw-normal mb-0">
+                              1
+                            </MDBTypography>
+                          </div>
+                          <div style={{ width: "80px" }}>
+                            <MDBTypography tag="h5" className="mb-0">
+                              $1199
+                            </MDBTypography>
+                          </div>
+                          <a href="#!" style={{ color: "#cecece" }}>
+                            <MDBIcon fas icon="trash-alt" />
+                          </a>
+                        </div>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+  
+                  <MDBCard className="mb-3">
+                    <MDBCardBody>
+                      <div className="d-flex justify-content-between">
+                        <div className="d-flex flex-row align-items-center">
+                          <div>
+                            <MDBCardImage
+                              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+                              fluid className="rounded-3" style={{ width: "65px" }}
+                              alt="Shopping item" />
+                          </div>
+                          <div className="ms-3">
+                            <MDBTypography tag="h5">
+                              MacBook Pro
+                            </MDBTypography>
+                            <p className="small mb-0">1TB, Graphite</p>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center">
+                          <div style={{ width: "50px" }}>
+                            <MDBTypography tag="h5" className="fw-normal mb-0">
+                              1
+                            </MDBTypography>
+                          </div>
+                          <div style={{ width: "80px" }}>
+                            <MDBTypography tag="h5" className="mb-0">
+                              $1799
+                            </MDBTypography>
+                          </div>
+                          <a href="#!" style={{ color: "#cecece" }}>
+                            <MDBIcon fas icon="trash-alt" />
+                          </a>
+                        </div>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+  
+                <MDBCol lg="5">
+                  <MDBCard style={{color:"info"}}className="bg-info text-white rounded-3">
+                    <MDBCardBody>
+                      <div className="d-flex justify-content-between align-items-center mb-4">
+                        <MDBTypography tag="h5" className="mb-0">
+                          Card details
+                        </MDBTypography>
+                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                          fluid className="rounded-3" style={{ width: "45px" }} alt="Avatar" />
+                      </div>
+  
+                      <p className="small">Card type</p>
+                      <a href="#!" type="submit" className="text-white">
+                        <MDBIcon fab icon="cc-mastercard fa-2x me-2" />
+                      </a>
+                      <a href="#!" type="submit" className="text-white">
+                        <MDBIcon fab icon="cc-visa fa-2x me-2" />
+                      </a>
+                      <a href="#!" type="submit" className="text-white">
+                        <MDBIcon fab icon="cc-amex fa-2x me-2" />
+                      </a>
+                      <a href="#!" type="submit" className="text-white">
+                        <MDBIcon fab icon="cc-paypal fa-2x me-2" />
+                      </a>
+  
+                      <form className="mt-4" style={{width:"400px"}}>
+                        <MDBInput className="mb-4" label="Cardholder's Name" type="text" size="lg"
+                          placeholder="Cardholder's Name" contrast />
+  
+                        <MDBInput className="mb-4" label="Card Number" type="text" size="lg" color="dark"
+                          minLength="19" maxLength="19" placeholder="1234 5678 9012 3457" contrast />
+  
+                        <MDBRow className="mb-4">
+                          <MDBCol md="6">
+                            <MDBInput className="mb-4" label="Expiration" type="text" size="lg" color="dark"
+                              minLength="7" maxLength="7" placeholder="MM/YYYY" contrast />
+                          </MDBCol>
+                          <MDBCol md="6">
+                            <MDBInput className="mb-4" label="Cvv" type="text" size="lg" minLength="3" color="dark"
+                              maxLength="3" placeholder="&#9679;&#9679;&#9679;" contrast />
+                          </MDBCol>
+                        </MDBRow>
+                      </form>
+  
+                      <hr />
+  
+                      <div className="d-flex justify-content-between">
+                        <p className="mb-2">Subtotal</p>
+                        <p className="mb-2">$4798.00</p>
+                      </div>
+  
+                      <div className="d-flex justify-content-between">
+                        <p className="mb-2">Shipping</p>
+                        <p className="mb-2">$20.00</p>
+                      </div>
+  
+                      <div className="d-flex justify-content-between">
+                        <p className="mb-2">Total(Incl. taxes)</p>
+                        <p className="mb-2">$4818.00</p>
+                      </div>
+  
+                      <MDBBtn color="dark" block size="sm">
+                        <div className="d-flex justify-content-between" style={{marginTop:"10px"}}>
+                       <h5> <a href="/" style={{color:"white", textDecoration:"none",}}>
+                         Checkout
+                        </a></h5>
+                        
+                         
+                        </div>
+                      </MDBBtn>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+              </MDBRow>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+  </section>
   );
-}
-
-export default SingleProduct
+  }

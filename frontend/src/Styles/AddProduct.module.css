@@ -1,0 +1,84 @@
+.logo img {
+      height: 80px;
+      width: 250px;
+      border-radius: 100px;
+      margin-bottom: 40px;
+      margin-left: 90px;
+      box-shadow: rgba(2, 79, 155, 0.2) 4px 5px 25px 5px;
+    }
+  .form {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    align-items: center;
+    padding: 30px;
+    box-shadow: rgba(164, 8, 91, 0.2) 0px 8px 24px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .form input[type="url"],
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  .form input[type="submit"] {
+    background: teal;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-top: 30px;
+  
+  }
+
+  .form input[type="submit"]:hover{
+    background-color: rgb(53, 53, 53);
+  
+  }
+
+  #container{
+
+    display: grid;;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 0px;
+    padding:40px;
+     margin:auto;
+  
+  }
+  #container #box{
+  
+     height:400px;
+    background-color:white;
+     width:320px;
+     text-align: center;
+     padding:20px;
+     padding-bottom: 40px; 
+     border-radius: 20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  #container img{
+    border: "2px solid red";
+     height:50%;
+     width:100%;
+     border-radius: 10px;
+  
+  }
+  

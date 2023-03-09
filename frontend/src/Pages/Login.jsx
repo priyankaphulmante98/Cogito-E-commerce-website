@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useState} from 'react'
-import styles from '../Styles/Login.module.css'
+import Styles from "../Styles/Login.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
@@ -37,7 +37,11 @@ function Login() {
 
           localStorage.setItem(
             "token",
-            JSON.stringify({ token: res.data.token, role: res.data.role,userId:res.data.userId })
+            JSON.stringify({
+              token: res.data.token,
+              role: res.data.role,
+              userId: res.data.userId,
+            })
           );
 
           setToken({ token: res.data.token, role: res.data.role });
@@ -49,7 +53,7 @@ function Login() {
           } else {
             // setToken(res.data.token);
 
-            navigate("/product");
+            navigate("/");
           }
         })
         .catch((err) => console.log(err));
@@ -57,9 +61,9 @@ function Login() {
   }
 
   return (
-    <div className={styles.login}>
-      <form id={styles.form} onSubmit={(e) => handleSubmit(e)}>
-        <div className={styles.logo}>
+    <div className={Styles.login}>
+      <form className={Styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <div className={Styles.logo}>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWvlomyP-g7nvShNiPqEDo3o9dd6ApBAh8w&usqp=CAU"
             alt="logo"
