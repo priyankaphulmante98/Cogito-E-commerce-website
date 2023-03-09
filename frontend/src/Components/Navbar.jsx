@@ -22,7 +22,7 @@ const {bg} = useContext(ColorContext)
        
         </span>
         
-        <div style={{width:"400px", display:"flex", flexDirection:"row-reverse", justifyContent:'space-around', marginLeft:"900px"}}>
+        <div id={Styles.rightBox}>
         <Link to='/contact'><i  style={{fontSize:"25px"}}class="fa-solid fa-user"></i></Link>
         
         <Link to="/cart"><i style={{fontSize:"25px"}} class="fa-solid fa-cart-plus"></i></Link>

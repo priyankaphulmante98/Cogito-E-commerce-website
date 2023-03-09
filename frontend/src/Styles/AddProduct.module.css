@@ -13,7 +13,7 @@
     margin: auto;
     align-items: center;
     padding: 30px;
-    box-shadow: rgba(164, 8, 91, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-color: whitesmoke;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -88,3 +88,54 @@
     overflow: hidden;
 
   }
+
+    /* responsive part start header */
+
+
+ @media only screen and (max-width: 1100px){
+  #Navbar{
+    width:1160px;
+    text-align: center;
+   
+   }
+   #container{
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+   } 
+   #Navbar #rightBox{
+    align-items: center;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+#Navbar{
+ width:760px;
+ text-align: center;
+}
+#container{
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+#Navbar #rightBox{
+  align-items: center;
+ }
+}
+@media only screen and (max-width: 480px) {
+#Navbar{
+ width:400px;
+ text-align: center;
+
+}
+#container{
+  grid-template-columns: repeat(1, 1fr);
+ column-gap: 20px;
+}
+
+#container #box{
+  width:380px;
+}
+#Navbar #rightBox{
+ margin-left: 0px;
+ }
+
+}  
