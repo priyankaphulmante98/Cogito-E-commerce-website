@@ -8,24 +8,42 @@
      margin:auto;
   
   }
+  
+  #container{
+
+    display: grid;;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 0px;
+    padding:40px;
+     margin:auto;
+  
+  }
   #container #box{
   
-     height:400px;
+     height:auto;
+    background-color:white;
      width:320px;
      text-align: center;
      padding:20px;
      padding-bottom: 40px; 
      border-radius: 20px;
-     background-color: white;;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   
   #container img{
     border: "2px solid red";
-     height:50%;
+     height:220px;
      width:100%;
      border-radius: 10px;
   
+  }
+  
+  #box>p{
+    /* border: 1px solid red; */
+    Height: 75px;
+    overflow: hidden;
+
   }
   #btndiv{
     width: 100px;

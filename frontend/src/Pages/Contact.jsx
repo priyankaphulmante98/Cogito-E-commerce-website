@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import axios from 'axios'
 import Styles from "../Styles/Contact.module.css";
-import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea } from "mdb-react-ui-kit";
+
 
 function Contact() {
   const [user, setuser] = useState({});
@@ -12,7 +12,10 @@ function Contact() {
     const { userId } = JSON.parse(localStorage.getItem("token"));
     axios
       .get(`http://localhost:8080/auth/user/${userId}`)
-      .then((res) => setuser(res.data));
+      .then((res) =>{
+        setuser(res.data)
+        console.log(res.data)
+      });
   }, []);
 
   return (
@@ -25,7 +28,7 @@ function Contact() {
             alt="logo"
           />
         </div>
-        <img src={user?.image} alt="chitr" />
+        <img src={user.image} alt="chitr" />
         <h5>NAME:{user?.name}</h5>
         <h6>ROLE: {user?.role}</h6>
         <h6>EMAIL: {user?.email}</h6>

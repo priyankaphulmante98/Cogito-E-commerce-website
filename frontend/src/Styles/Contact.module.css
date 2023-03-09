@@ -1,12 +1,12 @@
 body{
 
-    background: #040404 url("https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102__340.jpg") top right no-repeat;
-  background-color: #111;
+    /* background: #040404 url("https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102__340.jpg") top right no-repeat; */
+  background: #751212;
   height: 100vh;
   color: black;
   min-height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-size: cover;
+  background-attachment: fixed; */
   font-family: "Ubuntu", sans-serif;
 } 
 #chitr {

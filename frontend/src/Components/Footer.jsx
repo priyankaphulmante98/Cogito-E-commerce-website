@@ -13,22 +13,22 @@ export default function Footer() {
         </div>
 
         <div>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://www.facebook.com/priya.phulmante' className='me-4 text-reset'>
             <MDBIcon color='light' fab icon="facebook" /> 
           </a>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://twitter.com/priyankaphulma1' className='me-4 text-reset'>
             <MDBIcon  color='light' fab icon='twitter' />
           </a>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://github.com/priyankaphulmante98' className='me-4 text-reset'>
             <MDBIcon  color='light' fab icon='google' />
           </a>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://priyankaphulmante98.github.io' className='me-4 text-reset'>
             <MDBIcon  color='light' fab icon='instagram' />
           </a>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://www.linkedin.com/in/priyanka-phulmante-181633191' className='me-4 text-reset'>
             <MDBIcon  color='light' fab icon='linkedin' />
           </a>
-          <a href='/' className='me-4 text-reset'>
+          <a href='https://github.com/priyankaphulmante98' className='me-4 text-reset'>
             <MDBIcon  color='light' fab icon='github' />
           </a>
         </div>
@@ -103,7 +103,7 @@ export default function Footer() {
               </p>
               <p  style={{ color:"white" , textDecoration:"none"}}>
                 <MDBIcon   icon='envelope'/>
-                &nbsp;&nbsp; priyankaphulmante98@example.com
+                &nbsp;&nbsp; priyankaphulmante98@gmail.com
               </p>
               <p  style={{ color:"white" , textDecoration:"none"}}>
                 <MDBIcon   icon='phone'  />&nbsp;&nbsp;  + 8208117277

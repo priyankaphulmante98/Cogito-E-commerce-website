@@ -52,13 +52,18 @@ useEffect(() => {
 return (
   <>
     <form className={Styles.form} onSubmit={(e) => handleSubmit(e)}>
-      <div className={Styles.logo} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-        
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
-            alt="logo"
-          />
- 
+      <div
+        className={Styles.logo}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqhLeUXcpGhNJAJTl2SpCzD9qwiXNZV_XpA&usqp=CAU"
+          alt="logo"
+        />
       </div>
       <input
         type="url"
@@ -90,10 +95,10 @@ return (
       />
       <select name="category" onChange={(e) => handleChage(e)}>
         <option value="">Category</option>
-        <option value="jewellery">Jewellery</option>
-        <option value="cloths">Cloths</option>
-        <option value="shoes">Shoes</option>
-        <option value="books">Books</option>
+        <option value="lipstick">Lipstik</option>
+        <option value="eyelinear">Eyelinear</option>
+        <option value="cream">Cream</option>
+        <option value="mositure">Mositure</option>
       </select>
       <input type="Submit" />
     </form>

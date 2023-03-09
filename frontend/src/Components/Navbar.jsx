@@ -18,7 +18,7 @@ const {bg} = useContext(ColorContext)
       <span style={{width:"400px", display:"flex", justifyContent:"space-around"}}>
       
         <Link to="/"><i style={{fontSize:"25px"}} class="fa-solid fa-house"></i>&nbsp; HOME</Link>
-        <Link to="/singleproduct"><i style={{fontSize:"25px"}} class="fa-brands fa-product-hunt"></i></Link>
+        {/* <Link to="/singleproduct"><i style={{fontSize:"25px"}} class="fa-brands fa-product-hunt"></i></Link> */}
        
         </span>
         
