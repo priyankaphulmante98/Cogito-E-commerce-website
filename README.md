@@ -30,6 +30,9 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 - Add Products (only Admin can add Products)
 - add to cart page
 
+# Admin credientals 
+- Email: admin@gmail.com
+- Password: admin
 
 ## Built With Tech Stack
 
