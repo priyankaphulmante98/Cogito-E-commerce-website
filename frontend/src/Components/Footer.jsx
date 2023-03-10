@@ -41,33 +41,33 @@ export default function Footer() {
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
               <h6  style={{ color:"white" }} className='text-uppercase fw-bold mb-4'>
                 <MDBIcon  style={{ color:"white"  }} icon='gem' className='me-3' />
-                FUNDFLO
+                Cogito
               </h6>
               <p  style={{ color:"white" }}>
-              Fundflo Technologies is a fintech startup that is aiming to transform the working capital cycle of businesses by digitizing the B2B supply chain ecosystem
+              Cogito is an Indian e-commerce company that sells cosmetics and personal care products. Cogito is dedicated to the clean beauty movement and all of their products are vegan, cruelty-free and PETA-approved. Products are made with a majority of natural ingredients and extracts and are free of parabens, phthalates, alcohol and sulfates.
               </p>
             </MDBCol>
 
             <MDBCol  md='2' lg='2' xl='2' className='mx-auto mb-4'>
               <h6  style={{ color:"white" }} className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
-                <a  style={{ color:"white" , textDecoration:"none"}} href='#!' >
-                  javascript
+                <a  style={{ color:"white" , textDecoration:"none"}} href='/' >
+                  Lipstick
                 </a>
               </p>
               <p>
-                <a style={{ color:"white" , textDecoration:"none"}} href='#!'>
-                  React
+                <a style={{ color:"white" , textDecoration:"none"}} href='/'>
+                  Mositure
                 </a>
               </p>
               <p>
-                <a  style={{ color:"white" , textDecoration:"none"}} href='#!' >
-                 Node..js
+                <a  style={{ color:"white" , textDecoration:"none"}} href='/' >
+                 Eyelinear
                 </a>
               </p>
               <p>
-                <a style={{ color:"white" , textDecoration:"none"}} href='#!'>
-                 MongoDB
+                <a style={{ color:"white" , textDecoration:"none"}} href='/'>
+                 Cream
                 </a>
               </p>
             </MDBCol>
