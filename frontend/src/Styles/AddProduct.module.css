@@ -120,6 +120,7 @@
   align-items: center;
  }
 }
+
 @media only screen and (max-width: 480px) {
 #Navbar{
  width:400px;
@@ -130,9 +131,14 @@
   grid-template-columns: repeat(1, 1fr);
  column-gap: 20px;
 }
+.form{
+  width:350px;
+  margin: auto;
+  margin-top: 30px; 
+}
 
 #container #box{
-  width:380px;
+  width:330px;
 }
 #Navbar #rightBox{
  margin-left: 0px;

@@ -162,39 +162,42 @@ import {
                           </div>
 
                           <p className="small">Card type</p>
-                          <a href="#!" type="submit" className="text-white">
+                          <a href="/cart" type="submit" className="text-white">
                             <MDBIcon fab icon="cc-mastercard fa-2x me-2" />
                           </a>
-                          <a href="#!" type="submit" className="text-white">
+                          <a href="/cart" type="submit" className="text-white">
                             <MDBIcon fab icon="cc-visa fa-2x me-2" />
                           </a>
-                          <a href="#!" type="submit" className="text-white">
+                          <a href="/cart" type="submit" className="text-white">
                             <MDBIcon fab icon="cc-amex fa-2x me-2" />
                           </a>
-                          <a href="#!" type="submit" className="text-white">
+                          <a href="/cart" type="submit" className="text-white">
                             <MDBIcon fab icon="cc-paypal fa-2x me-2" />
                           </a>
 
-                          <form className="mt-4" style={{ width: "400px" }}>
+                          <form className="mt-4" style={{ width: "250px" }}>
                             <MDBInput
                               className="mb-4"
                               label="Cardholder's Name"
                               type="text"
                               size="lg"
+                              minLength="7"
+                              maxLength="7"
                               placeholder="Cardholder's Name"
-                              contrast
+                              contrast required
                             />
 
                             <MDBInput
                               className="mb-4"
                               label="Card Number"
                               type="text"
-                              size="lg"
+                              size="md"
                               color="dark"
-                              minLength="19"
-                              maxLength="19"
+                              minLength="7"
+                              maxLength="7"
                               placeholder="1234 5678 9012 3457"
                               contrast
+                               required
                             />
 
                             <MDBRow className="mb-4">
@@ -203,23 +206,26 @@ import {
                                   className="mb-4"
                                   label="Expiration"
                                   type="text"
-                                  size="lg"
+                                  size="md"
                                   color="dark"
                                   minLength="7"
                                   maxLength="7"
                                   placeholder="MM/YYYY"
-                                  contrast
+                                  contrast 
+                                  required
                                 />
                               </MDBCol>
+                              
                               <MDBCol md="6">
                                 <MDBInput
+                                req
                                   className="mb-4"
                                   label="Cvv"
                                   type="text"
                                   size="lg"
-                                  minLength="3"
+                                  minLength="7"
                                   color="dark"
-                                  maxLength="3"
+                                  maxLength="7"
                                   placeholder="&#9679;&#9679;&#9679;"
                                   contrast
                                 />
