@@ -22,20 +22,20 @@ function AddProduct() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(data);
-   axios.post(`http://localhost:8080/product`,data).then((res) => {alert("product added sucessfully") 
+   axios.post(`https://fundlo.onrender.com/product`,data).then((res) => {alert("product added sucessfully") 
    getData()})
 
   }
 
 async function getData() {
-  let res = await axios.get(`http://localhost:8080/product`);
+  let res = await axios.get(`https://fundlo.onrender.com/product`);
   console.log(res.data,"dataaaaaaaaaaaaaaaaaaaaa");
   setgData(res.data);
 }
 
 function handleDelete(id) {
   try {
-    axios.delete(`http://localhost:8080/product/${id}`)
+    axios.delete(`https://fundlo.onrender.com/product/${id}`)
       .then((res) => {
         alert("deleted")
         getData();
@@ -113,7 +113,7 @@ return (
             <p>{e.desc}</p>
             <h5>{e.price}</h5>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <Modal />
+              <Modal   />
               <button
                 id={Styles.btn}
                 type="button"

@@ -1,7 +1,7 @@
 const user = require("../model/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-
+require("dotenv").config()
 //hashing function
 
 async function hashPassword(pass) {
@@ -82,7 +82,7 @@ exports.loginUsers = async (req, res) => {
             name: validateuser.name,
             role: validateuser.role,
           },
-          "SECRETPRIYA123",
+          process.env.SECRET,
           { expiresIn: "10 days" }
         );
 

@@ -18,7 +18,7 @@ import {
     const [total, setTotal] = useState(0);
 
     function getrCarts() {
-      axios.get(`http://localhost:8080/cart`).then((res) => {
+      axios.get(`https://fundlo.onrender.com/cart`).then((res) => {
         setCarts(res.data);
         console.log(res.data);
         let tot = res.data?.reduce(
@@ -31,7 +31,7 @@ import {
 
     function changeQuanity(id, value) {
       axios
-        .patch(`http://localhost:8080/cart/${id}`, { quantity: value })
+        .patch(`https://fundlo.onrender.com/cart/${id}`, { quantity: value })
         .then((res) => {
           console.log("jhal");
           getrCarts();
@@ -39,7 +39,7 @@ import {
     }
 
     function removefromcart(id) {
-      axios.delete(`http://localhost:8080/cart/${id}`).then((res) => {
+      axios.delete(`https://fundlo.onrender.com/cart/${id}`).then((res) => {
         alert("deleeted");
         getrCarts();
       });

@@ -30,7 +30,7 @@ function Login() {
       alert("please fill all the data");
     } else {
       axios
-        .post("http://localhost:8080/auth/login", form)
+        .post("https://fundlo.onrender.com/auth/login", form)
         .then((res) => {
           alert(res.data.message);
           console.log(res.data);
@@ -52,7 +52,6 @@ function Login() {
             navigate("/admin/add");
           } else {
             // setToken(res.data.token);
-
             navigate("/");
           }
         })

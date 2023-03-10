@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import  axios from "axios";
 
-function Modal() {
+function Modal({e,getData}) {
+
+
+
+  const [data,setData]=useState({
+    image: "",
+    title: "",
+    desc: "",
+    price: "",
+    category: ""
+  })
+
+  function handleChage(e) {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  }
+
+  function handleUpdate() {
+    try {
+      
+ 
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+  
+
   return (
     <div>
       <button
@@ -42,6 +71,8 @@ function Modal() {
                       id="image"
                       name="image"
                       placeholder="image"
+                      value={data.image}
+                      onChange={(e)=>handleChage(e)}
                     />
                   </div>
 
@@ -52,6 +83,8 @@ function Modal() {
                       id="title"
                       name="title"
                       placeholder="title"
+                      value={data.title}
+                      onChange={()=>handleChage()}
                     />
                   </div>
 
@@ -61,6 +94,8 @@ function Modal() {
                     id="desc"
                     name="desc"
                     placeholder="desc"
+                    value={data.desc}
+                      onChange={(e)=>handleChage(e)}
                   />
                 </div>
                 <div className="mb-3">
@@ -70,23 +105,25 @@ function Modal() {
                     id="price"
                     name="price"
                     placeholder="price"
+                    value={data.price}
+                      onChange={(e)=>handleChage(e)}
                   />
                 </div>
 
                 <div className="mb-3">
-                  <select name="category" className="form-control">
+                  <select name="category" className="form-control" value={data.category}
+                      onChange={(e)=>handleChage(e)}>
                     <option value="">Category</option>
-                    <option value="jewellery">Jewellery</option>
-                    <option value="cloths">Cloths</option>
-                    <option value="shoes">Shoes</option>
-                    <option value="books">Books</option>
+                    <option value="lipstick">Lipstik</option>
+                    <option value="eyelinear">Eyelinear</option>
+                    <option value="cream">Cream</option>
+                    <option value="mositure">Mositure</option>
                   </select>
                 </div>
               </form>
             </div>
             <div className="modal-footer">
-             
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleUpdate()}>
                 Save changes
               </button>
             </div>

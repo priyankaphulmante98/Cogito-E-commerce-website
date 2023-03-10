@@ -28,7 +28,7 @@ const {bg} = useContext(ColorContext)
         <Link to="/cart"><i style={{fontSize:"25px"}} class="fa-solid fa-cart-plus"></i></Link>
         <Link to="/login">LOGIN</Link>
         <Link to="/signup">SIGNUP</Link>
-       {token.role === "admin" &&  <Link to="/admin/add">ADMIN</Link>}
+       {token?.role === "admin" &&  <Link to="/admin/add">ADMIN</Link>}
        </div>
         <div>
          

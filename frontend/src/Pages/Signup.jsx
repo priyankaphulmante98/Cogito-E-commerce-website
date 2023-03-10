@@ -29,7 +29,7 @@ function Signup() {
     const { email, password, image, name } = user;
     if (email && password && image && name) {
       axios
-        .post("http://localhost:8080/auth/signup", user)
+        .post("https://fundlo.onrender.com/auth/signup", user)
         .then((res) => {
           alert(res.data.message);
           navigate("/login");

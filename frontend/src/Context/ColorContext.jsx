@@ -7,7 +7,7 @@ export const ColorContextProvider = ({ children }) => {
   
 
   function ChangeColor(){
-    let color = ["rubyred","jamred","darkgray", "black", "purple","lightgreen", "orange", "green"]
+    let color = ["rubyred","red","blue", "black", "purple","pink", "orange", "green"]
     let num =  Math.floor(Math.random() * color.length) 
     setBg(color[num])
   }

@@ -11,7 +11,7 @@ function Contact() {
   useEffect(() => {
     const { userId } = JSON.parse(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:8080/auth/user/${userId}`)
+      .get(`https://fundlo.onrender.com/auth/user/${userId}`)
       .then((res) =>{
         setuser(res.data)
         console.log(res.data)
