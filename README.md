@@ -1,7 +1,5 @@
 # Cogito Ecommerce Website
 
-# HOME PAGE PREVIEW
-
 ![cogito1](https://user-images.githubusercontent.com/103947245/224358113-3e891ea2-27eb-42ed-96da-83c7d34eec88.png)
 
 
