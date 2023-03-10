@@ -52,10 +52,6 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 
  - https://fundlo.onrender.com
 
-## Screenshots
-
-
-
 ## Run Locally
 
 Clone the project
