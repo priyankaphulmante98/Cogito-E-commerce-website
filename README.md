@@ -42,12 +42,16 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 
 # PRODUCT PAGE PREVIEW
 
-![Screenshot (728)](https://user-images.githubusercontent.com/103947245/224358348-a5b22b26-e783-4aa9-880d-af5fe339bb91.png)
+
+![Screenshot (728)](https://user-images.githubusercontent.com/103947245/224364891-9e19bff3-bd7b-4d22-8d98-75a8b7b51855.png)
+
+![Screenshot (716)](https://user-images.githubusercontent.com/103947245/224364949-88057bd7-8cf9-464a-ac95-000d11eb7238.png)
+
+# CART PAGE PREVIEW 
+
+![Screenshot (744)](https://user-images.githubusercontent.com/103947245/224360561-99915b1f-192e-4b58-83f5-7332f11e0764.png)
 
 
-# FOOTER PREVIEW
-
-![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
 
 
 ## Run Locally
@@ -89,10 +93,6 @@ VS code , GitHub, MongoDB, Render, Thunder Client
 
 ![Screenshot (733)](https://user-images.githubusercontent.com/103947245/224360281-1ba97a60-231d-4f79-a6ff-b6ebfa16e784.png)
 
-# CART PAGE PREVIEW 
-
-![Screenshot (744)](https://user-images.githubusercontent.com/103947245/224360561-99915b1f-192e-4b58-83f5-7332f11e0764.png)
-
 
 # USER ADMIN PROFILE PAGE 
 
@@ -105,6 +105,10 @@ VS code , GitHub, MongoDB, Render, Thunder Client
 
 
 ![Screenshot (739)](https://user-images.githubusercontent.com/103947245/224361208-7770c753-6020-4110-b833-b2f83411a1f4.png)
+
+# FOOTER PREVIEW
+
+![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
 
 ## Authors
 
