@@ -12,6 +12,8 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 
 [Deploy link available here](https://frontend-priyankaphulmante98.vercel.app)
 
+[Github replo link](https://github.com/priyankaphulmante98/Cogito-E-commerce-website)
+
 
 ## Pages
 - Landing page
@@ -61,7 +63,7 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 Clone the project
 
 ```bash
-  https://github.com/priyankaphulmante98/fundlo-assignment.git
+  https://github.com/priyankaphulmante98/Cogito-E-commerce-website.git
 ```
 
 Go to the project directory
