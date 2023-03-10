@@ -48,7 +48,7 @@ import {
 
     useEffect(() => {
       getrCarts();
-    }, []);
+    }, [carts.length]);
 
     return (
       <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>

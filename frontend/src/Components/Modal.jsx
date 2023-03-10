@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import  axios from "axios";
 
-function Modal({e,getData}) {
+function Modal ({dataa}) {
+  console.log(dataa,'sel')
 
 
 
@@ -28,7 +29,9 @@ function Modal({e,getData}) {
   }
 
 
-  
+  // useEffect(()=>{
+
+  // },[dataa])
 
   return (
     <div>
@@ -52,7 +55,7 @@ function Modal({e,getData}) {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                UPDATE PRODUCT
+                UPDATE PRODUCTY
               </h1>
               <button
                 type="button"

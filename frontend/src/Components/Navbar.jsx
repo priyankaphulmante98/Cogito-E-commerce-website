@@ -15,10 +15,18 @@ const {bg} = useContext(ColorContext)
 
   return (
     <div id={Styles.Navbar} style={{backgroundColor:bg}}>
+
       <span style={{width:"400px", display:"flex", justifyContent:"space-around"}}>
-      
+
+      <div className={Styles.logo}>
+          <img
+            id={Styles.chitr}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpc1z1KfdTErbc_A0_dNFg8E1rN8jgHe5M8w&usqp=CAU"
+            alt="logo"
+          />
+        </div>
+    
         <Link to="/"><i style={{fontSize:"25px"}} class="fa-solid fa-house"></i>&nbsp; HOME</Link>
-        {/* <Link to="/singleproduct"><i style={{fontSize:"25px"}} class="fa-brands fa-product-hunt"></i></Link> */}
        
         </span>
         
@@ -30,9 +38,7 @@ const {bg} = useContext(ColorContext)
         <Link to="/signup">SIGNUP</Link>
        {token?.role === "admin" &&  <Link to="/admin/add">ADMIN</Link>}
        </div>
-        <div>
-         
-      </div>
+     
         
              
                

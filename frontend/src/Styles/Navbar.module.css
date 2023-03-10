@@ -1,7 +1,7 @@
 
 #Navbar{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-decoration: none;
     background-color: teal;
     padding:20px
@@ -21,6 +21,13 @@
     color:  rgba(7, 182, 191, 0.918);
     transition: all 0.3s ease;
   }
+
+  #chitr {
+      height: 40px;
+      width: 150px;
+      border-radius: 50px;
+      box-shadow: rgba(4, 84, 131, 0.2) 4px 5px 25px 5px;
+    }
 
   #Navbar #rightBox{
        width:600px;

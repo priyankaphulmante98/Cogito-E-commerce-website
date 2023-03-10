@@ -113,7 +113,7 @@ return (
             <p>{e.desc}</p>
             <h5>{e.price}</h5>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <Modal   />
+              <Modal   dataa = {e}/>
               <button
                 id={Styles.btn}
                 type="button"
