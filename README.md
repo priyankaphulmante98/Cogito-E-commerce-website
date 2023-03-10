@@ -1,5 +1,14 @@
 # Cogito Ecommerce Website
 
+Cogito is an Indian e-commerce company that sells cosmetics and personal care products. Cogito is dedicated to the clean beauty movement and all of their products are vegan, cruelty-free and PETA-approved. Products are made with a majority of natural ingredients and extracts and are free of parabens, phthalates, alcohol and sulfates.
+
+## Want to see live preview >>
+
+[Deploy link available here](https://frontend-priyankaphulmante98.vercel.app)
+
+[Github replo link](https://github.com/priyankaphulmante98/Cogito-E-commerce-website)
+
+
 # HOME PAGE PREVIEW
 
 ![cogito1](https://user-images.githubusercontent.com/103947245/224358113-3e891ea2-27eb-42ed-96da-83c7d34eec88.png)
@@ -8,15 +17,6 @@
 
 ![Screenshot (716)](https://user-images.githubusercontent.com/103947245/224364949-88057bd7-8cf9-464a-ac95-000d11eb7238.png)
 
-
-Cogito is an Indian e-commerce company that sells cosmetics and personal care products. Cogito is dedicated to the clean beauty movement and all of their products are vegan, cruelty-free and PETA-approved. Products are made with a majority of natural ingredients and extracts and are free of parabens, phthalates, alcohol and sulfates.
-
-
-## Want to see live preview >>
-
-[Deploy link available here](https://frontend-priyankaphulmante98.vercel.app)
-
-[Github replo link](https://github.com/priyankaphulmante98/Cogito-E-commerce-website)
 
 
 ## Pages
