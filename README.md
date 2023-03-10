@@ -87,11 +87,9 @@ React.js, Nodejs, Bootstrap, Express, MongoDB, JSX, CSS, Api, Render, vercel.
 VS code , GitHub, MongoDB, Render, Thunder Client
 
 # ADMIN  DASHBOARD PREVIEW
+![Screenshot (737)](https://user-images.githubusercontent.com/103947245/224365435-431dc710-4340-4be0-8361-bd2c5ff6aa69.png)
 
-![Screenshot (737)](https://user-images.githubusercontent.com/103947245/224359703-d9c39c24-01a9-4114-98fd-5380710b89ed.png)
-
-
-![Screenshot (733)](https://user-images.githubusercontent.com/103947245/224360281-1ba97a60-231d-4f79-a6ff-b6ebfa16e784.png)
+![Screenshot (733)](https://user-images.githubusercontent.com/103947245/224365502-498eee68-ce47-46e3-8a14-42130399ae4b.png)
 
 
 # USER ADMIN PROFILE PAGE 
