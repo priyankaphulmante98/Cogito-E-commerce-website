@@ -4,6 +4,10 @@
 
 ![cogito1](https://user-images.githubusercontent.com/103947245/224358113-3e891ea2-27eb-42ed-96da-83c7d34eec88.png)
 
+![Screenshot (728)](https://user-images.githubusercontent.com/103947245/224364891-9e19bff3-bd7b-4d22-8d98-75a8b7b51855.png)
+
+![Screenshot (716)](https://user-images.githubusercontent.com/103947245/224364949-88057bd7-8cf9-464a-ac95-000d11eb7238.png)
+
 
 Cogito is an Indian e-commerce company that sells cosmetics and personal care products. Cogito is dedicated to the clean beauty movement and all of their products are vegan, cruelty-free and PETA-approved. Products are made with a majority of natural ingredients and extracts and are free of parabens, phthalates, alcohol and sulfates.
 
@@ -45,13 +49,6 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
  - https://fundlo.onrender.com
 
 ## Screenshots
-
-# PRODUCT PAGE PREVIEW
-
-
-![Screenshot (728)](https://user-images.githubusercontent.com/103947245/224364891-9e19bff3-bd7b-4d22-8d98-75a8b7b51855.png)
-
-![Screenshot (716)](https://user-images.githubusercontent.com/103947245/224364949-88057bd7-8cf9-464a-ac95-000d11eb7238.png)
 
 # CART PAGE PREVIEW 
 
