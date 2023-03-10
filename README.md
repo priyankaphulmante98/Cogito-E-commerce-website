@@ -10,7 +10,7 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 
 ## Want to see live preview >>
 
-[Deploy link available here](https://frontend-priyankaphulmante98.vercel.app/)
+[Deploy link available here](https://frontend-priyankaphulmante98.vercel.app)
 
 
 ## Pages
