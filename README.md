@@ -1,4 +1,4 @@
-# Cogito 
+# Cogito Ecommerce Website
 
 # HOME PAGE PREVIEW
 
