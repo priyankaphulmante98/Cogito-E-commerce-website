@@ -109,6 +109,10 @@ VS code , GitHub, MongoDB, Render, Thunder Client
 ![Screenshot (739)](https://user-images.githubusercontent.com/103947245/224361208-7770c753-6020-4110-b833-b2f83411a1f4.png)
 
 
+# FOOTER PREVIEW
+
+![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
+
 ## Authors
 
 👤 **Priyanka Phulmante**
@@ -117,6 +121,3 @@ VS code , GitHub, MongoDB, Render, Thunder Client
 - Linkdin:[priyanka phulmante](https://www.linkedin.com/in/priyanka-phulmante-181633191)
 - Portfolio:[priyanka phulmante](https://priyankaphulmante98.github.io)
 
-# FOOTER PREVIEW
-
-![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
