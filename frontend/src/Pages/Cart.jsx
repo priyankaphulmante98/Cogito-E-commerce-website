@@ -153,7 +153,7 @@ import {
                               Card details
                             </MDBTypography>
                             <MDBCardImage
-                              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                              src="https://avatars.githubusercontent.com/u/103947245?v=4"
                               fluid
                               className="rounded-3"
                               style={{ width: "45px" }}
