@@ -38,6 +38,10 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 - Render
 - vercel
 
+# Backend Deploy Link 
+
+ - https://fundlo.onrender.com
+
 ## Screenshots
 
 # PRODUCT PAGE PREVIEW
@@ -50,8 +54,6 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 # CART PAGE PREVIEW 
 
 ![Screenshot (744)](https://user-images.githubusercontent.com/103947245/224360561-99915b1f-192e-4b58-83f5-7332f11e0764.png)
-
-
 
 
 ## Run Locally
@@ -87,9 +89,11 @@ React.js, Nodejs, Bootstrap, Express, MongoDB, JSX, CSS, Api, Render, vercel.
 VS code , GitHub, MongoDB, Render, Thunder Client
 
 # ADMIN  DASHBOARD PREVIEW
-![Screenshot (737)](https://user-images.githubusercontent.com/103947245/224365435-431dc710-4340-4be0-8361-bd2c5ff6aa69.png)
 
-![Screenshot (733)](https://user-images.githubusercontent.com/103947245/224365502-498eee68-ce47-46e3-8a14-42130399ae4b.png)
+![Screenshot (737)](https://user-images.githubusercontent.com/103947245/224359703-d9c39c24-01a9-4114-98fd-5380710b89ed.png)
+
+
+![Screenshot (733)](https://user-images.githubusercontent.com/103947245/224360281-1ba97a60-231d-4f79-a6ff-b6ebfa16e784.png)
 
 
 # USER ADMIN PROFILE PAGE 
@@ -98,20 +102,19 @@ VS code , GitHub, MongoDB, Render, Thunder Client
 
 # SIGNUP LOGIN PAGE PREVIEW
 
-
 ![Screenshot (734)](https://user-images.githubusercontent.com/103947245/224361368-53a20b89-d2f1-421a-b059-1f9367d93a82.png)
-
 
 ![Screenshot (739)](https://user-images.githubusercontent.com/103947245/224361208-7770c753-6020-4110-b833-b2f83411a1f4.png)
 
-# FOOTER PREVIEW
-
-![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
 
 ## Authors
-
 
 👤 **Priyanka Phulmante**
 
 - GitHub: [@priyankaphulmante98](https://github.com/priyankaphulmante98)
+- Linkdin:[priyanka phulmante](https://www.linkedin.com/in/priyanka-phulmante-181633191)
+- Portfolio:[priyanka phulmante](https://priyankaphulmante98.github.io)
 
+# FOOTER PREVIEW
+
+![Screenshot (731)](https://user-images.githubusercontent.com/103947245/224358436-a92dc707-667d-46f6-acc0-40af5f789c93.png)
