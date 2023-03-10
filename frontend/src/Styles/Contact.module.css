@@ -1,7 +1,6 @@
 body{
 
     /* background: #040404 url("https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102__340.jpg") top right no-repeat; */
-  background: #751212;
   height: 100vh;
   color: black;
   min-height: 500px;
@@ -40,3 +39,16 @@ body{
   margin-bottom:20px;
 }
 
+
+@media only screen and (max-width: 480px) {
+
+ 
+  .form{
+    width:350px;
+    margin: auto;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+  }
+  }  
+  
+  
