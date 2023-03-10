@@ -53,9 +53,6 @@ Cogito is an Indian e-commerce company that sells cosmetics and personal care pr
 
 ## Screenshots
 
-# CART PAGE PREVIEW 
-
-![Screenshot (744)](https://user-images.githubusercontent.com/103947245/224360561-99915b1f-192e-4b58-83f5-7332f11e0764.png)
 
 
 ## Run Locally
@@ -89,6 +86,11 @@ React.js, Nodejs, Bootstrap, Express, MongoDB, JSX, CSS, Api, Render, vercel.
 
 ### Setup
 VS code , GitHub, MongoDB, Render, Thunder Client
+
+# CART PAGE PREVIEW 
+
+![Screenshot (744)](https://user-images.githubusercontent.com/103947245/224360561-99915b1f-192e-4b58-83f5-7332f11e0764.png)
+
 
 # ADMIN  DASHBOARD PREVIEW
 
