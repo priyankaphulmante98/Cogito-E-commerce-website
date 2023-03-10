@@ -13,8 +13,8 @@
   #container #box{
   
      height:auto;
-    background-color:white;
-     width:320px;
+     background-color:white;
+     width:300px;
      text-align: center;
      padding:20px;
      padding-bottom: 40px; 
@@ -79,7 +79,7 @@
   /* responsive part start header */
 
 
- @media only screen and (max-width: 1100px){
+ /* @media only screen and (max-width: 1100px){
   #Navbar{
     width:1160px;
     text-align: center;
@@ -92,9 +92,9 @@
    #Navbar #rightBox{
     align-items: center;
    }
-}
+} */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
 #Navbar{
  width:760px;
  text-align: center;
@@ -107,7 +107,9 @@
   align-items: center;
  }
 }
-@media only screen and (max-width: 480px) {
+
+
+@media only screen and (max-width:400px) {
 #Navbar{
  width:400px;
  text-align: center;
@@ -115,14 +117,23 @@
 }
 #container{
   grid-template-columns: repeat(1, 1fr);
- column-gap: 20px;
 }
 
 #container #box{
-  width:380px;
+  width:300px;
+  margin:auto;
 }
 #Navbar #rightBox{
  margin-left: 0px;
  }
+
+ .img-div{
+  width:500px;
+ }
+
+ #footer{
+  wodth:400px;
+ }
+
 
 }  

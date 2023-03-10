@@ -1,39 +1,59 @@
+#Navbar {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: teal;
+  padding: 20px;
+}
+#Navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+}
 
-#Navbar{
-    display:flex;
-    justify-content: space-between;
-    text-decoration: none;
-    background-color: teal;
-    padding:20px
+#Navbar .max #logo img {
+  height: 50px;
+  width: 60px;
+  box-shadow: rgba(0, 8, 8, 0.918) 2px 2px 20px 2px;
+  border-radius: 50%;
+  color: rgba(7, 182, 191, 0.918);
+  transition: all 0.3s ease;
+}
+
+#chitr {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  box-shadow: rgba(4, 84, 131, 0.2) 4px 5px 25px 5px;
+}
+
+#Navbar #rightBox {
+  width: 600px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 400px) {
+  #Navbar {
+    width: 400px;
+    text-align: center;
   }
-  #Navbar a{
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white
-  }
-  
-  #Navbar .max .logo img {
-    height:50px;
-    width:60px;
-    box-shadow:  rgba(0, 8, 8, 0.918) 2px 2px 20px 2px;
-    border-radius: 50%;
-    color:  rgba(7, 182, 191, 0.918);
-    transition: all 0.3s ease;
+  #Navbar #logo {
+    display: none;
   }
 
-  #chitr {
-      height: 40px;
-      width: 150px;
-      border-radius: 50px;
-      box-shadow: rgba(4, 84, 131, 0.2) 4px 5px 25px 5px;
-    }
-
-  #Navbar #rightBox{
-       width:600px;
-      display:flex; 
-      flex-direction:row-reverse;
-      justify-content:space-around;
-     flex-direction: row-reverse;
-       /* border: 3px solid red; */
+  #container {
+    grid-template-columns: repeat(1, 1fr);
   }
+
+  #container #box {
+    width: 380px;
+    margin: auto;
+  }
+  #Navbar #rightBox {
+    display: flex;
+    justify-content: center;
+  }
+}

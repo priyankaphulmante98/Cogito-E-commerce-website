@@ -18,15 +18,15 @@ const {bg} = useContext(ColorContext)
 
       <span style={{width:"400px", display:"flex", justifyContent:"space-around"}}>
 
-      <div className={Styles.logo}>
+      <div id={Styles.logo}>
           <img
             id={Styles.chitr}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpc1z1KfdTErbc_A0_dNFg8E1rN8jgHe5M8w&usqp=CAU"
             alt="logo"
           />
-        </div>
+      </div>
     
-        <Link to="/"><i style={{fontSize:"25px"}} class="fa-solid fa-house"></i>&nbsp; HOME</Link>
+        <Link id={Styles.home} to="/"><i  style={{fontSize:"25px"}} class="fa-solid fa-house"></i>&nbsp; HOME</Link>
        
         </span>
         
